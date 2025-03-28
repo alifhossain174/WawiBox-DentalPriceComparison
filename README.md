@@ -1,4 +1,3 @@
-1️⃣ Project Title & Description
 # Dental Price Comparison System
 
 This is a Laravel-based application that helps users find the best supplier for dental products based on price and quantity. The system takes product requests, compares prices from multiple suppliers, and returns the most cost-effective option.
@@ -10,8 +9,15 @@ This is a Laravel-based application that helps users find the best supplier for 
 - REST API endpoint for easy integration.
 
 ## Installation
-
-1. Clone the repository:
-   ```sh
+Clone the repository:
    git clone https://github.com/your-username/dental-price-comparison.git
    cd dental-price-comparison
+
+   Install dependencies:
+   composer install
+
+   Set up the database:
+   php artisan migrate --seed
+
+   Start the application:
+   php artisan serve
