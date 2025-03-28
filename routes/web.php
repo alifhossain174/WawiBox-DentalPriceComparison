@@ -27,4 +27,4 @@ Route::get('/', [PriceComparisonController::class, 'homePage'])->name('HomePage'
 Route::post('add/another/product', [PriceComparisonController::class, 'addAnotherProduct'])->name('AddAnotherProduct');
 Route::post('compare/suppliers/price', [PriceComparisonController::class, 'compareSupplierPrice'])->name('CompareSupplierPrice');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');

@@ -50,7 +50,8 @@ class PriceComparisonController extends Controller
         $product_ids = explode(',', $request->product_ids);
         $product_qts = explode(',', $request->product_qtys);
 
-        $orders = []; // Example: [{"product": "Dental Floss", "quantity": 5}, {"product": "Ibuprofen", "quantity": 12}]
+        // Example Equivalent Json Body: [{"product": "Dental Floss", "quantity": 5}, {"product": "Ibuprofen", "quantity": 12}]
+        $orders = [];
         foreach ($product_ids as $index => $product_id) {
             $orders[] = [
                 "product_id" => (int) $product_id,
@@ -59,7 +60,7 @@ class PriceComparisonController extends Controller
         }
 
         // suppose Two supplier have same price in that case we can implement different logic here like supplier rating to get the best supplier
-        $suppliers = Supplier::orderBy('id', 'desc')->get();
+        $suppliers = Supplier::orderBy('id', 'asc')->get();
         $bestSupplier = null;
         $bestPrice = PHP_INT_MAX;
 
