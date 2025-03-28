@@ -10,7 +10,7 @@ This is a Laravel-based application that helps users find the best supplier for 
 
 ## Installation
 1. Clone the repository: git clone https://github.com/your-username/dental-price-comparison.git
-2. cd dental-price-comparison
+2. cd WawiBox-DentalPriceComparison
 3. Install dependencies: composer install
 4. Set up the database: php artisan migrate --seed
 5. Start the application: php artisan serve
