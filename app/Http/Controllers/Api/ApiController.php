@@ -16,7 +16,7 @@ class ApiController extends Controller
         $orders = $request->input('orders'); // Example Json Body: [{"product": "Dental Floss", "quantity": 5}, {"product": "Ibuprofen", "quantity": 12}]
 
         // suppose Two supplier have same price in that case we can implement different logic here like supplier rating to get the best supplier
-        $suppliers = Supplier::orderBy('id', 'asc')->get();
+        $suppliers = Supplier::orderBy('id', 'desc')->get();
         $bestSupplier = null;
         $bestPrice = PHP_INT_MAX;
 

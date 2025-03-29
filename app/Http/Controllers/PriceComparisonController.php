@@ -108,11 +108,4 @@ class PriceComparisonController extends Controller
             'total_cost' => $bestPrice
         ]);
     }
-
-    public function findBestPrice(Request $request){
-
-        $productName = $request->product_name;
-        $quantity = $request->qty;
-
-    }
 }
